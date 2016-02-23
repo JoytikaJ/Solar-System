@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+  	  background: -webkit-radial-gradient(ellipse, #1c2837 10%, #050608 100%);
+  background: radial-gradient(ellipse, #1c2837 10%, #050608 100%);
+}
+
+.about {
+  font-family: 'Lato', sans-serif;
+  color: #d3d3d3;
+  padding: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  z-index: 999;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+
+hr {
+  margin: 20px;
+  border-top: 1px solid white;
+  background: transparent;
+  width: 70%;
+  opacity: .1;
+}
+
+p {
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.info {
+  list-style: none;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.about p + p {
+  margin-top: 20px;
+}
+
+.galaxy {
+	height: 100%;
+	width: 100%;
+    position: relative;
+}
+
+.galaxy:after {
+ content: "";
+ position: absolute;
+  height: 2px;
+  width: 2px;
+  top: -2px
+}
+
+.galaxy div:not(.sun) {
+  border: 1px dashed #33373d;
+}
+.galaxy div:not(.sun):before {
+  left: 50%;
+  border-radius: 100px;
+  content: '';
+  position: absolute;
+}
+
+.galaxy div {
+	border-radius: 100%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.sun {
+	height: 50px;
+	width: 50px;
+  margin-top: -22px;
+  margin-left: -21px;
+	background-color: #ffdb00;
+    background: -webkit-radial-gradient(center, ellipse, #ffd000 1%, #f9b700 50%, #f9b700 39%, #e06317 100%);
+  background: radial-gradient(ellipse at center, #ffd000 1%, #f9b700 39%, #f9b700 50%, #e06317 100%);
+  box-shadow: 0 0 12px 2px rgba(195, 107, 0, 0.9), 0 0 70px 30px rgba(190, 203, 0, 0.2);
+  background-position: -30px -110px;
+  background-size: 160%;
+	z-index: 10;
+}
+
+/* Revolution of planets around Sun in terms of Earth days: Mercury (87.5); Venus(224.7); Earth(365.256); Mars(686.93); Jupiter(4332); Saturn(10759); Uranus(30791); Neptune(60189); Pluto(22463840);
+*/
+.mercury {
+  height: 71.96px;
+  width: 71.96px;
+  margin-top: -35px;
+  margin-left: -35px;
+  -webkit-animation: orbit 3.5933s linear infinite; 
+          animation: orbit 3.5933s linear infinite; 
+}
+
+.mercury:before {
+	height: 3.5px;
+	width: 3.5px;
+  margin-top: -1.75px;
+	background: rgb(156, 156, 156);
+	box-shadow: inset 1px 4px 4px 2px rgba(0, 0, 0, 0.3);
+	z-index: 9; 
+}
+
+.venus {
+  height: 100px;
+  width: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  -webkit-animation: orbit2 9.2278s linear infinite; 
+          animation: orbit2 9.2278s linear infinite; 
+}
+
+.venus:before {
+	height: 8.65px;
+	width: 8.65px;
+  margin-top: -4.32px;
+	background: rgb(171, 101, 34);
+	box-shadow: inset 1px 4px 4px 2px rgba(0, 0, 0, 0.3);
+	z-index: 8;
+}
+
+.earth {
+  height: 145px;
+  width: 145px;
+  margin-top: -72.5px;
+  margin-left: -72.5px;
+  -webkit-animation: orbit 15s linear infinite; 
+          animation: orbit 15s linear infinite; 
+}
+
+.earth:before {
+	height: 9.15px;
+	width: 9.15px;
+  margin-top: -4.55px;
+	background: rgb(6, 62, 125);
+  box-shadow: inset 1px 3px 4px 2px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+.earth:before {
+	height: 9.15px;
+	width: 9.15px;
+  margin-top: -4.55px;
+	background: rgb(6, 62, 125);
+  box-shadow: inset 1px 3px 4px 2px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+.mars {
+  height: 190px;
+  width: 190px;
+  margin-top: -95px;
+  margin-left: -95px;
+  -webkit-animation: orbit 28.2102s linear infinite; 
+          animation: orbit 28.2102s linear infinite; 
+}
+
+.mars:before {
+	height: 5px;
+	width: 5px;
+  margin-top: -2.6px;
+	background: rgb(212, 76, 3);
+	box-shadow: inset 1px 4px 4px 2px rgba(0, 0, 0, 0.3);
+	z-index: 6;
+}
+
+.jupiter {
+  height: 340px;
+  width: 340px;
+  margin-top: -170px;
+  margin-left: -170px;
+  -webkit-animation: orbit 177.9026s linear infinite; 
+          animation: orbit 177.9026s linear infinite; 
+}
+
+.jupiter:before {
+  height: 50px;
+  width: 50px;
+  margin-left: -43px;
+  margin-top: -19px;
+  background: -webkit-linear-gradient(rgb(154, 144, 127) 15%, rgb(154, 144, 127) 25%, rgb(156, 156, 155) 27%, rgb(156, 156, 155) 45%, rgb(143, 132, 117) 50%, rgb(181, 161, 129) 60%, rgb(181, 161, 129) 80%, rgb(128, 125, 123) 85%);
+  background: -moz-linear-gradient(rgb(154, 144, 127) 15%, rgb(154, 144, 127) 25%, rgb(156, 156, 155) 27%, rgb(156, 156, 155) 45%, rgb(143, 132, 117) 50%, rgb(181, 161, 129) 60%, rgb(181, 161, 129) 80%, rgb(128, 125, 123) 85%);
+  background: -o-linear-gradient(rgb(154, 144, 127) 15%, rgb(154, 144, 127) 25%, rgb(156, 156, 155) 27%, rgb(156, 156, 155) 45%, rgb(143, 132, 117) 50%, rgb(181, 161, 129) 60%, rgb(181, 161, 129) 80%, rgb(128, 125, 123) 85%);
+  background: linear-gradient(rgb(154, 144, 127) 15%, rgb(154, 144, 127) 25%, rgb(156, 156, 155) 27%, rgb(156, 156, 155) 45%, rgb(143, 132, 117) 50%, rgb(181, 161, 129) 60%, rgb(181, 161, 129) 80%, rgb(128, 125, 123) 85%);
+  box-shadow: inset 5px 10px 15px 5px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+.saturn {
+  height: 440px;
+  width: 440px;
+  margin-top: -220px;
+  margin-left: -220px;
+  -webkit-animation: orbit 441.8408s linear infinite; 
+          animation: orbit 441.8408s linear infinite; 
+}
+
+.saturn:before {
+	height: 41.85px;
+	width: 41.85px;
+  margin-top: -20.93px;
+	margin-left: 22px;
+  box-shadow: inset 4px 8px 15px 4px rgba(0, 0, 0, 0.4);
+	z-index: 4;
+  	background: -webkit-linear-gradient(rgb(95, 88, 79) 5%, rgb(144, 129, 101) 6%, rgb(144, 129, 101) 15%, rgb(213, 184, 133) 20%, rgb(210, 175, 119) 25%, rgb(210, 175, 119) 45%, rgb(254, 208, 133) 50%, rgb(254, 208, 133) 75%, rgb(149, 136, 114) 85%);
+	background: -moz-linear-gradient(rgb(95, 88, 79) 5%, rgb(144, 129, 101) 6%, rgb(144, 129, 101) 15%, rgb(213, 184, 133) 20%, rgb(210, 175, 119) 25%, rgb(210, 175, 119) 45%, rgb(254, 208, 133) 50%, rgb(254, 208, 133) 75%, rgb(149, 136, 114) 85%);
+	background: -o-linear-gradient(rgb(95, 88, 79) 5%, rgb(144, 129, 101) 6%, rgb(144, 129, 101) 15%, rgb(213, 184, 133) 20%, rgb(210, 175, 119) 25%, rgb(210, 175, 119) 45%, rgb(254, 208, 133) 50%, rgb(254, 208, 133) 75%, rgb(149, 136, 114) 85%);
+	background: linear-gradient(rgb(95, 88, 79) 5%, rgb(144, 129, 101) 6%, rgb(144, 129, 101) 15%, rgb(213, 184, 133) 20%, rgb(210, 175, 119) 25%, rgb(210, 175, 119) 45%, rgb(254, 208, 133) 50%, rgb(254, 208, 133) 75%, rgb(149, 136, 114) 85%);
+}
+
+/* saturn's ring(s)
+.saturn:after {
+    width: 25px;
+    height: 170px;
+    border-radius: 8px;
+    background: none;
+    border: 2px solid #5a4e34;
+    left: -3px;
+    top: -3px;
+    -webkit-transform: skewY(-50deg);
+    -moz-transform: skewY(-50deg);
+    -o-transform: skewY(-50deg);
+    transform: skewY(-50deg);
+    z-index: 5;
+} */
+
+.uranus {
+  height: 520px;
+  width: 520px;
+  margin-top: -260px;
+  margin-left: -260px;
+  -webkit-animation: orbit2 1264.4967s linear infinite; 
+          animation: orbit2 1264.4967s linear infinite; 
+}
+
+.uranus:before {
+	height: 18.2px;
+	width: 18.2px;
+  margin-top: -9.1px;
+  margin-left: -6px;
+	background: #7fbfff;
+	box-shadow: inset 2.5px 5px 15px 2.5px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.neptune {
+  height: 630px;
+  width: 630px;
+  margin-top: -315px;
+  margin-left: -315px;
+  -webkit-animation: orbit 2471.7869s linear infinite; 
+          animation: orbit 2471.7869s linear infinite; 
+}
+
+.neptune:before {
+	height: 17.675px;
+	width: 17.675px;
+  margin-top: -8.84px;
+  margin-left:-6px;
+	background: #0059b2;
+	box-shadow: inset 3px 6px 15px 3px rgba(0, 0, 0, 0.4);
+	z-index: 2;
+}
+
+.pluto {
+  height: 780px;
+  width: 780px;
+  margin-top: -450px;
+  margin-left: -320px;
+  -webkit-animation: orbit 922524.4769s linear infinite; 
+          animation: orbit 922524.4769s linear infinite; 
+}
+
+.pluto:before {
+  height: 3px;
+  width: 3px;
+  background: #fff;
+  margin-top: -1.5px;
+  margin-left: -1.5px;
+}
+
+/* seven of these heavenly bodies rotate counter-clockwise */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/*Venus & Uranus*/
+@keyframes orbit2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
