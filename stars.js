@@ -10,9 +10,4 @@ $(document).ready(function() {
   $('.saturn-bottom').css({'transform':'rotateZ(-10deg)'});
 //animations for planets orbiting the sun
 //timing taken from http://www.sjsu.edu/faculty/watkins/orbital.htm
-
-
-
-
 }); //ending jquery dom init
-
